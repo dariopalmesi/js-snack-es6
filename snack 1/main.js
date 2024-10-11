@@ -7,43 +7,40 @@
 const biciclette = [
     {
         "nome": "Mountain Bike Pro",
-        "peso": "13 kg"
+        "peso": 13
     },
     {
         "nome": "Bici da Corsa Ultra",
-        "peso": "7.5 kg"
+        "peso": 7.5
     },
     {
         "nome": "Bici Elettrica City",
-        "peso": "24 kg"
-    }
-]
+        "peso": 24
+    }]
 
 
 const biciRowEl = document.querySelector('.row')
 console.log(biciRowEl);
 
-const biciPesoMinore = 13
+let biciPeso = 13
+let biciPesoMinore = []
 
 for (let i = 0; i < biciclette.length; i++) {
     const bici = biciclette[i];
-    if (biciPesoMinore < bici ) {
-        console.log('true');      
+    if (bici.peso < biciPeso ) {
+        biciPesoMinore.push(biciclette[i])
     }
-    // console.log(bici.nome, bici.peso);
-
-
-    // const markup = `
-    // <div class="row">
-    //             <div class="col">
-    //                 <div class="card">
-    //                     <p>${bici.peso}</p>
-    //                 </div>
-    //             </div>
-    //         </div>
-    // `
-
-    // biciRowEl.insertAdjacentHTML('afterend', markup)
-
 }
+  const markup = `
+     <div class="row">
+                 <div class="col">
+                     <div class="card">
+                         <p>${biciPesoMinore}</p>
+                     </div>
+                 </div>
+             </div>
+     `
+
+     biciRowEl.insertAdjacentHTML('afterend', markup)
+console.log(biciPesoMinore);
 
