@@ -29,7 +29,7 @@ for (let i = 0; i < biciclette.length; i++) {
     const bici = biciclette[i];
     
     if (bici.peso < biciPeso ) {
-        biciPesoMinore.push(biciclette[i])
+        biciPesoMinore = biciclette[i]
     }
 
 
