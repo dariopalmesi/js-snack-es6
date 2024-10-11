@@ -29,10 +29,13 @@ for (let i = 0; i < biciclette.length; i++) {
 
     const markup = `
     <div class="col">
-                    <div class="card">
-                        <p>${bici.peso}</p>
-                    </div>
+                <div class="card">
+                    <p>${bici.peso}</p>
                 </div>
+            </div>
     `
+
+ 
+
 }  
-biciRowEl.innerHTML(markup)
+biciRowEl.insertAdjacentElement('afterend', markup)
