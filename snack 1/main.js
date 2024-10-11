@@ -19,8 +19,7 @@ const biciclette = [
     }]
 
 
-const biciRowEl = document.querySelector('.row')
-console.log(biciRowEl);
+
 
 let biciPeso = 13
 let biciPesoMinore = []
