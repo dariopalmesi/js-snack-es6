@@ -24,23 +24,32 @@ console.log(biciRowEl);
 
 let biciPeso = 13
 let biciPesoMinore = []
+const key = 'peso'
 
 for (let i = 0; i < biciclette.length; i++) {
     const bici = biciclette[i];
+    
     if (bici.peso < biciPeso ) {
         biciPesoMinore.push(biciclette[i])
     }
-}
-  const markup = `
-     <div class="row">
-                 <div class="col">
-                     <div class="card">
-                         <p>${biciPesoMinore}</p>
-                     </div>
-                 </div>
-             </div>
-     `
 
-     biciRowEl.insertAdjacentHTML('afterend', markup)
+
+
+
+ }
+//  const markup = `
+// //      <div class="row">
+// //                  <div class="col">
+// //                      <div class="card">
+// //                          <p>${biciPesoMinore}</p>
+// //                      </div>
+// //                  </div>
+// //              </div>
+// //      `
+
+//      biciRowEl.insertAdjacentHTML('afterend', markup)
+  
 console.log(biciPesoMinore);
 
+const divEl = document.getElementById('bici')
+divEl.innerHTML = biciPesoMinore[key]
