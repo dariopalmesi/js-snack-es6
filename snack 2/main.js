@@ -23,8 +23,28 @@ const squadre = [
     }
 ];
 
+
+
+function getNomiPunti(item) {
+
+    return [item.nome, item.falliSubiti].join("");
+}
+const newTeam = []
+for (let i = 0; i < squadre.length; i++) {
+    const squadra = squadre[i];
+    
+    newTeam.push({
+        nome: squadra.nome,
+        falliSubiti: squadra.falliSubiti
+    })
+}
+console.log(newTeam);
+
+
+
+
+
 function squadreCalcioRandom(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
-    
+
 }
- console.log(squadre);
